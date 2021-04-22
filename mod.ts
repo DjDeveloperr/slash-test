@@ -40,7 +40,7 @@ async function home(request: Request) {
     return json({
       type: 4,
       data: {
-        flags: 0,
+        flags: 64,
         components: [
           {
             type: 1,
@@ -60,7 +60,7 @@ async function home(request: Request) {
   } else if (type === 3) {
     return json({
       type: 4,
-      data: { content: 'You clicked button!' }
+      data: { flags: 64, content: 'You clicked button!' }
     })
   }
 
