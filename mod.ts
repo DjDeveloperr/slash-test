@@ -1,6 +1,3 @@
-// Sift is a small routing library that abstracts the details like registering
-// a fetch event listener and provides a simple function (serve) that has an
-// API to invoke a function for a specific path.
 import {
   json,
   serve,
@@ -44,9 +41,27 @@ async function home(request: Request) {
       type: 4,
       data: {
         flags: 0,
-        content: `Pong!`,
+        components: [
+          {
+            type: 1,
+            components: [
+              {
+                type: 2,
+                label: "Click me",
+                style: 1,
+                custom_id: "test",
+              }
+            ]
+          }
+        ]
+        content: `Test`,
       },
     });
+  } else if (type === 3) {
+    return json({
+      type: 4,
+      data: { content: 'You clicked button!' }
+    })
   }
 
   return json({ error: "bad request" }, { status: 400 });
