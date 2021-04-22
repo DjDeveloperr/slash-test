@@ -53,7 +53,7 @@ async function home(request: Request) {
               }
             ]
           }
-        ]
+        ],
         content: `Test`,
       },
     });
