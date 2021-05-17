@@ -41,7 +41,7 @@ async function home(request: Request) {
       type: 4,
       data: {
         flags: 64,
-        content: "a".repeat(2001),
+        content: "a".repeat(10),
         components: [
           {
             type: 1,
