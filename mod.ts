@@ -40,7 +40,7 @@ async function home(request: Request) {
     return json({
       type: 4,
       data: {
-        flags: 0,
+        flags: 64,
         content: "a".repeat(2001),
         components: [
           {
