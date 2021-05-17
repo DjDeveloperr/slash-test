@@ -41,6 +41,7 @@ async function home(request: Request) {
       type: 4,
       data: {
         flags: 0,
+        content: "a".repeat(4000),
         components: [
           {
             type: 1,
@@ -54,7 +55,6 @@ async function home(request: Request) {
             ]
           }
         ],
-        content: `Test`,
       },
     });
   } else if (type === 3) {
